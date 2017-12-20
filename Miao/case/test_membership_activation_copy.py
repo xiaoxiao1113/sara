@@ -10,7 +10,8 @@ sys.setdefaultencoding('utf-8')
 
 class Live(unittest.TestCase):
     def setUp(self):
-        self.base_url = host = "http://47.93.117.116:6080/MiaoCai/"
+        # self.base_url = host = "http://47.93.117.116:6080/MiaoCai/"
+        self.base_url = host = "http://192.168.1.208:6080/MiaoCai/"
         u'''登录接口'''
         url_login = host + "Login"
         login_data = {'phone':18513112593, 'pwd':'aOic7k6K7n0=', 'flag':'zh'}
@@ -29,7 +30,7 @@ class Live(unittest.TestCase):
             "miao-token": self.token,
             "miao-appcheckapisecurity":"cgjAXZkBcEbEYMZckgroPOJ89kVDsjuxQDE1MTA4OTk0NDY5Mjg="
         }
-        merber_data = {"user_id":self.UserId , "card_code":"N1217020009", "card_code_password":"S1U08A"}
+        merber_data = {"user_id":self.UserId , "card_code":"N1217040001", "card_code_password":"LGVU0E"}
         s = requests.post(Merber_url,merber_data,headers=header)
         result1 = s.json()
         result = s.json()["message"]

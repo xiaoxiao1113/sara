@@ -9,7 +9,8 @@ sys.setdefaultencoding('utf-8')
 
 class Live(unittest.TestCase):
     def setUp(self):
-        self.base_url = host = "http://47.93.117.116:6080/MiaoCai/"
+        #self.base_url = host = "http://47.93.117.116:6080/MiaoCai/"
+        self.base_url = host = "http://192.168.1.208:6080/MiaoCai/"
         u'''登录接口'''
         url_login = host + "Login"
         login_data = {'phone':18600393689, 'pwd':'aOic7k6K7n0=', 'flag':'zh'}
@@ -42,6 +43,7 @@ class Live(unittest.TestCase):
                          "vipId":"1"}
         applePay_r = requests.post(applePay_url, applePay_data ,headers=header)
         applePay_result = applePay_r.json()["message"]
+        print applePay_r.content
         if applePay_result == u"苹果预支付成功！":
             print "苹果预支付成功！"
     def test_vister_apple_pay(self):

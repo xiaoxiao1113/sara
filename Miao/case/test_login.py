@@ -9,7 +9,7 @@ class Login(unittest.TestCase):
     ''''用户登录'''
     def setUp(self):
         # self.base_url = 'http://47.93.117.116:6080/MiaoCai/Login'
-        self.base_url = 'http://47.93.117.116:6080/MiaoCai/Login'
+        self.base_url = 'http://192.168.1.208:6080/MiaoCai/Login'
     def tearDown(self):
         print(type(self.result))
         #pass
